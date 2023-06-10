@@ -226,7 +226,7 @@ a{
 
 /* mob version*/
 
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
     .cell {
     width: 70px;
     height: 70px;
