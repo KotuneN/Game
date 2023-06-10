@@ -252,7 +252,7 @@ a{
     .currentPlayer {
         margin-bottom: 0;
     }
-    .modal-overlay-win, .modal-overlay-error, .modal-overlay :before {
+    .modal-overlay-win, .modal-overlay-error, .modal-overlay, .setting :before {
         -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
     }
