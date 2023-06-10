@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.contentFull{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+  
+.menu {
+    width: 100%;
+    border-bottom: 1px solid #000 ;
+    height: 50px;
+    margin-top: 5px;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    
+}
+
+.menuXO{
+    font-size: 50px;
+    margin: 10px;
+}
+  
+.setting {
+ background-color: #fff;   
+ border: 1px ridge black;
+ padding: 1px;
+ cursor: pointer;
+ font-size: 15px;
+}
+
+.setting:hover{
+    background-color: #f1f1f1;
+    transition: background .1s;
+}
+
+.modal-overlay, .modal-overlay-error, .modal-overlay-win{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.modal-overlay--visible, .modal-overlay-error--visible, .modal-overlay-win--visible{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-info, .error, #final-rez{
+    display:grid;
+    background-color: #fff;
+    border: 1px ridge black;
+}
+
+.main-info{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 72px; /* ширина */
+    height: 38px; /* высота */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: 32px; /* высота кнопки */
+    width: 32px; /* ширина кнопки */
+    background: #fff; /* цвет кнопки */
+    top: 3px; /* положение кнопки по вертикали относительно основы */
+    left: 3px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: #118c4e;
+}
+.switch-on::after {
+    left: 37px;
+}
+
+.selections-player, .fon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.players, .selections-fon{
+    display: flex;
+}
+
+.main-content{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.content {
+    display: flex;
+    font-family: sans-serif;
+}
+
+#area {
+    width: 305px;
+   /* border: 1px solid #000;*/
+    margin:  0 auto;
+    font-size: 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    line-height: 80px;
+    text-align: center;
+    display: inline-block;
+    font-size: 120px;
+    border: 1px solid #000;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background .1s;
+}
+
+.cell:hover {
+    background-color: #f1f1f1 ;
+}
+
+.currentPlayer {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.xod{
+    font-size: 35px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.stat table {
+    border-collapse: collapse;
+}
+
+.stat table, .stat th, .stat td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #000;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.github{
+    background-image: url(../CSS/img/icons8-github.svg);
+}
+.vk{
+    background-image: url(../CSS/img/icons8-vk.svg);
+}
+.tg{
+    background-image: url(../CSS/img/icons8-телеграм.svg);
+}
+
+.error{
+    padding: 10px;
+    font-size: 20px;
+}
+
+#final-rez{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* mob version*/
+
+@media (max-width: 550px) {
+    .cell{
+    width: 70px;
+    height: 70px;
+    line-height: 60px;
+    font-size: 70px;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .stat{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .content{
+        justify-content: center;
+    }
+    #area{
+        width: 220px;
+    }
+
+}

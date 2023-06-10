@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X/O - GAME</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="CSS/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="modals">
+        <div class="modal-overlay" data-target="setting">
+            <div class="modal-info" data-target="setting">
+                <span style="margin:0 auto; padding: 5px;">В РАЗРАБОТКЕ</span>
+                <!-- <div class="selections-player">
+                    <div class="how-players">Количество игроков</div>
+                    <br>
+                    <div class="players">
+                        <div class="one-player">1 игрок</div>
+                        <div class="switch-btn switch-on"></div>
+                        <div class="two-player">2 игрока</div>
+                    </div>
+                </div>
+                <div class="fon">
+                    <div class="info-fon">Выбор фона</div>
+                    <div class="selections-fon">
+                        <div class="white-fon">Светлый</div>
+                        <div class="switch-fon"></div>
+                        <div class="black-fon">Темный</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="modals-info-game">
+            <div class="modal-overlay-error" data-target="setting">
+                <div class="error">
+                    Ячейка занята, выберите другую
+                </div>
+            </div>
+        </div>
+
+        <div class="win-player">
+            <div class="modal-overlay-win">
+                <div id="final-rez">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="contentFull">
+        <header class="header">
+            <div class="blok-header">
+                <div class="menu">
+                    <div class="menuXO">X</div>
+                    <div class="menu-info">
+                        <div class="name">Игра крестики и нолики By KotuneN</div>
+                    </div>
+                    <div class="menuXO">O</div>
+                </div>
+
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="main-info">
+                <div class="currentPlayer">
+                    <span class="xod">Ход: <span id="curPlayer"></span></span>
+                </div>
+                <div class="stat">
+                    <table>
+                        <th colspan="2">Статистика</th>
+                        <tr>
+                            <td>X</td>
+                            <td><span id="wX">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td><span id="wO">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ничья</td>
+                            <td><span id="xo">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <button class="setting" data-path="setting">Настройки</button>
+            </div>
+            <div class='content'>
+                <div class="area" id='area'></div>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="logo">
+                KotuneN © 2023
+            </div>
+            <div class="comp">
+            </div>
+            <div class="info">
+                <a href="https://github.com/KotuneN">
+                    <img src="CSS/img/icons8-github.svg" alt="">
+                </a>
+                <a href="https://vk.com/kotune">
+                    <img src="CSS/img/icons8-vk.svg" alt="">
+                </a>
+                <a href="https://t.me/KotuneN">
+                    <img src="CSS/img/icons8-телеграм.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
